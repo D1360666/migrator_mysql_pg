@@ -19,11 +19,11 @@ public class DBController {
     @Autowired
     private ods_recurso_mysql_service serviceMysql;
 
-    @ResponseStatus(HttpStatus.ACCEPTED)
     @GetMapping
-    public List<Ods_Recurso> listarRecursos(){
-        return serviceMysql.findAll();
+    public String prueba(){
+        return "hola";
     }
-
+//public List<Ods_Recurso> listarRecursos(){
+    //return serviceMysql.findAll();
 
 }

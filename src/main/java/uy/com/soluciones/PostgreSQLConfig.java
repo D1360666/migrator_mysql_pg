@@ -18,14 +18,14 @@ import java.util.Map;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "odsEntityManagerFactory", transactionManagerRef = "odsTransactionManager",
+@EnableJpaRepositories(entityManagerFactoryRef = "odsPGEntityManagerFactory", transactionManagerRef = "odsPGTransactionManager",
         basePackages = {"uy.com.soluciones.repositorypgsql"})
 public class PostgreSQLConfig {
     @Autowired
     private Environment env;
 
-    @Bean(name="odsDataSource")
-    public DataSource odsDatasource(){
+    @Bean(name="odsPGDataSource")
+    public DataSource odsPGDatasource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl(env.getProperty("postgre.datasource.url"));
         dataSource.setUsername(env.getProperty("postgre.datasource.username"));
@@ -35,10 +35,10 @@ public class PostgreSQLConfig {
         return dataSource;
     }
 
-    @Bean(name ="odsEntityManagerFactory")
+    @Bean(name ="odsPGEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(){
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(odsDatasource());
+        em.setDataSource(odsPGDatasource());
         em.setPackagesToScan("uy.com.soluciones.modelpgsql");;
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -53,7 +53,7 @@ public class PostgreSQLConfig {
         return em;
     }
 
-    @Bean(name="odsTransactionManager")
+    @Bean(name="odsPGTransactionManager")
     public PlatformTransactionManager transactionManager(){
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactoryBean().getObject());
