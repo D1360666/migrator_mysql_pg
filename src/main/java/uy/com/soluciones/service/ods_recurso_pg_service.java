@@ -7,8 +7,7 @@ import uy.com.soluciones.service.interfaces.IOdsRecursoPgService;
 
 @Service
 public class ods_recurso_pg_service implements IOdsRecursoPgService {
-    @Autowired
-    private Ods_Recurso_PG_Repository recursoPgRepository;
+
 
 
 

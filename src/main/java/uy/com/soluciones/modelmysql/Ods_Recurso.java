@@ -8,199 +8,200 @@ import java.io.Serializable;
 @Table(name= "ods_recursos")
 public class Ods_Recurso implements Serializable {
     @Id
-    private Integer Terminal;
-    @Id
-    private Integer Ticket;
-    private Double Total;
-    private int Renglon;
-    private int Dia;
-    private int Mes;
-    private int Año;
-    private int IdMercaderia;
-    private String Descripcion;
-    private Double Preventa;
-    private Double Cantidad;
-    private Double Cotizacion;
-    private Double Importe;
-    private int IdSubFamilia;
-    private String TipoVenta;
-    private String NombreSubFamilia;
-    private int IdFamilia;
-    private String NombreFamilia;
+    private Integer id;
+    private Integer terminal;
+    private Integer ticket;
+    private Double total;
+    private int renglon;
+    private int dia;
+    private int mes;
+    private int año;
+    private int idMercaderia;
+    private String descripcion;
+    private Double preventa;
+    private Double cantidad;
+    private Double cotizacion;
+    private Double importe;
+    private int idSubFamilia;
+    private String tipoVenta;
+    private String nombreSubFamilia;
+    private int idFamilia;
+    private String nombreFamilia;
 
     public Ods_Recurso() {
     }
 
-    public Ods_Recurso(Integer terminal, Integer ticket, Double total, int renglon, int dia, int mes, int año, int idMercaderia, String descripcion, Double preventa, Double cantidad, Double cotizacion, Double importe, int idSubFamilia, String tipoVenta, String nombreSubFamilia, int idFamilia, String nombreFamilia) {
-        Terminal = terminal;
-        Ticket = ticket;
-        Total = total;
-        Renglon = renglon;
-        Dia = dia;
-        Mes = mes;
-        Año = año;
-        IdMercaderia = idMercaderia;
-        Descripcion = descripcion;
-        Preventa = preventa;
-        Cantidad = cantidad;
-        Cotizacion = cotizacion;
-        Importe = importe;
-        IdSubFamilia = idSubFamilia;
-        TipoVenta = tipoVenta;
-        NombreSubFamilia = nombreSubFamilia;
-        IdFamilia = idFamilia;
-        NombreFamilia = nombreFamilia;
+    public Ods_Recurso(Integer id, Integer terminal, Integer ticket, Double total, int renglon, int dia, int mes, int año, int idMercaderia, String descripcion, Double preventa, Double cantidad, Double cotizacion, Double importe, int idSubFamilia, String tipoVenta, String nombreSubFamilia, int idFamilia, String nombreFamilia) {
+        this.id = id;
+        this.terminal = terminal;
+        this.ticket = ticket;
+        this.total = total;
+        this.renglon = renglon;
+        this.dia = dia;
+        this.mes = mes;
+        this.año = año;
+        this.idMercaderia = idMercaderia;
+        this.descripcion = descripcion;
+        this.preventa = preventa;
+        this.cantidad = cantidad;
+        this.cotizacion = cotizacion;
+        this.importe = importe;
+        this.idSubFamilia = idSubFamilia;
+        this.tipoVenta = tipoVenta;
+        this.nombreSubFamilia = nombreSubFamilia;
+        this.idFamilia = idFamilia;
+        this.nombreFamilia = nombreFamilia;
     }
 
-   /* public Integer getId() {
+    public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
-    }*/
+    }
 
     public Integer getTerminal() {
-        return Terminal;
+        return terminal;
     }
 
     public void setTerminal(Integer terminal) {
-        Terminal = terminal;
+        this.terminal = terminal;
     }
 
     public Integer getTicket() {
-        return Ticket;
+        return ticket;
     }
 
     public void setTicket(Integer ticket) {
-        Ticket = ticket;
+        this.ticket = ticket;
     }
 
     public Double getTotal() {
-        return Total;
+        return total;
     }
 
     public void setTotal(Double total) {
-        Total = total;
+        this.total = total;
     }
 
     public int getRenglon() {
-        return Renglon;
+        return renglon;
     }
 
     public void setRenglon(int renglon) {
-        Renglon = renglon;
+        this.renglon = renglon;
     }
 
     public int getDia() {
-        return Dia;
+        return dia;
     }
 
     public void setDia(int dia) {
-        Dia = dia;
+        this.dia = dia;
     }
 
     public int getMes() {
-        return Mes;
+        return mes;
     }
 
     public void setMes(int mes) {
-        Mes = mes;
+        this.mes = mes;
     }
 
     public int getAño() {
-        return Año;
+        return año;
     }
 
     public void setAño(int año) {
-        Año = año;
+        this.año = año;
     }
 
     public int getIdMercaderia() {
-        return IdMercaderia;
+        return idMercaderia;
     }
 
     public void setIdMercaderia(int idMercaderia) {
-        IdMercaderia = idMercaderia;
+        this.idMercaderia = idMercaderia;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+        this.descripcion = descripcion;
     }
 
     public Double getPreventa() {
-        return Preventa;
+        return preventa;
     }
 
     public void setPreventa(Double preventa) {
-        Preventa = preventa;
+        this.preventa = preventa;
     }
 
     public Double getCantidad() {
-        return Cantidad;
+        return cantidad;
     }
 
     public void setCantidad(Double cantidad) {
-        Cantidad = cantidad;
+        this.cantidad = cantidad;
     }
 
     public Double getCotizacion() {
-        return Cotizacion;
+        return cotizacion;
     }
 
     public void setCotizacion(Double cotizacion) {
-        Cotizacion = cotizacion;
+        this.cotizacion = cotizacion;
     }
 
     public Double getImporte() {
-        return Importe;
+        return importe;
     }
 
     public void setImporte(Double importe) {
-        Importe = importe;
+        this.importe = importe;
     }
 
     public int getIdSubFamilia() {
-        return IdSubFamilia;
+        return idSubFamilia;
     }
 
     public void setIdSubFamilia(int idSubFamilia) {
-        IdSubFamilia = idSubFamilia;
+        this.idSubFamilia = idSubFamilia;
     }
 
     public String getTipoVenta() {
-        return TipoVenta;
+        return tipoVenta;
     }
 
     public void setTipoVenta(String tipoVenta) {
-        TipoVenta = tipoVenta;
+        this.tipoVenta = tipoVenta;
     }
 
     public String getNombreSubFamilia() {
-        return NombreSubFamilia;
+        return nombreSubFamilia;
     }
 
     public void setNombreSubFamilia(String nombreSubFamilia) {
-        NombreSubFamilia = nombreSubFamilia;
+        this.nombreSubFamilia = nombreSubFamilia;
     }
 
     public int getIdFamilia() {
-        return IdFamilia;
+        return idFamilia;
     }
 
     public void setIdFamilia(int idFamilia) {
-        IdFamilia = idFamilia;
+        this.idFamilia = idFamilia;
     }
 
     public String getNombreFamilia() {
-        return NombreFamilia;
+        return nombreFamilia;
     }
 
     public void setNombreFamilia(String nombreFamilia) {
-        NombreFamilia = nombreFamilia;
+        this.nombreFamilia = nombreFamilia;
     }
 }

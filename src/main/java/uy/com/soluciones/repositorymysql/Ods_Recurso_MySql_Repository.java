@@ -6,4 +6,5 @@ import uy.com.soluciones.modelmysql.Ods_Recurso;
 
 @Repository
 public interface Ods_Recurso_MySql_Repository extends JpaRepository<Ods_Recurso, Integer> {
+
 }
